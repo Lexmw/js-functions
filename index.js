@@ -62,9 +62,23 @@ checkAge(13);
 
 // 5. Build a Simple Calculator
 // TODO: Define functions for subtract, multiply, and divide
+function calculate(num1, num2, operator) {
+  if (operator === "+") {
+    return add(num1, num2);
+  } else if (operator === "-") {
+    return subtract(num1, num2);
+  } else if (operator === "*") {
+    return multiply(num1, num2);
+  } else if (operator === "/") {
+    return divide(num1, num2);
+  } else {
+    return "Invalid operator"; // If the operator is not recognized
+  }
+}
 
+console.log(calculate(10, 5, "+")); // Output: 15
+console.log(calculate(10, 5, "-")); // Output: 5
+console.log(calculate(10, 5, "*")); // Output: 50
+console.log(calculate(10, 5, "/")); // Output: 2
 
 // TODO: Write a calculate function that takes two numbers and an operator, then calls the appropriate function
-
-
-console.log('123^&*((&^%');
